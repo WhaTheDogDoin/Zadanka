@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<script>
+
+    function wynik(n) {
+        switch(n) {
+            case 0:
+                let a1 = document.querySelector('.a1').value;
+                let a2 = document.querySelector('.a2').value;
+                let a3 = document.querySelector('.a3').value;
+                let a4 = document.querySelector('.a4').value;
+                let wynik = document.querySelector('.wynik');
+
+                var w = (a1*a4)-(a3*a2); // Obliczanie
+
+                wynik.innerHTML = 'Przeliczenie 2x2: ' + w;
+            break;
+
+            case 1:
+                let x1 = document.querySelector('.x1').value;
+                let x2 = document.querySelector('.x2').value;
+                let x3 = document.querySelector('.x3').value;
+                let x4 = document.querySelector('.x4').value;
+                let x5 = document.querySelector('.x5').value;
+                let x6 = document.querySelector('.x6').value;
+                let x7 = document.querySelector('.x7').value;
+                let x8 = document.querySelector('.x8').value;
+                let x9 = document.querySelector('.x9').value;
+
+                let wynik2 = document.querySelector('.wynik2');
+
+                var w2 = (x1*x5*x9)+(x2*x6*x7)+(x3*x4*x8) - (x7*x5*x3)+(x8*x6*x1)+(x9*x4*x2); // Obliczanie
+
+                wynik2.innerHTML = 'Przeliczenie 3x3: ' + w2;
+            break;
+        }
+    }
+
+</script>
+<body>
+
+    <h2>Tabela 2x2</h2>
+    <input type="form" placeholder="Podaj 1 liczbe" class="a1">
+    <input type="form" placeholder="Podaj 2 liczbe" class="a2">
+    <input type="form" placeholder="Podaj 3 liczbe" class="a3">
+    <input type="form" placeholder="Podaj 4 liczbe" class="a4">
+    <br>
+    <button onclick="wynik(0)">Licz</button>
+
+    <p class="wynik"></p>
+    
+    <br>
+
+    <h3>Tabela 3x3</h3>
+    <input type="form" placeholder="Podaj 1 liczbe" class="x1">
+    <input type="form" placeholder="Podaj 2 liczbe" class="x2">
+    <input type="form" placeholder="Podaj 3 liczbe" class="x3">
+    <input type="form" placeholder="Podaj 4 liczbe" class="x4">
+    <input type="form" placeholder="Podaj 5 liczbe" class="x5">
+    <input type="form" placeholder="Podaj 6 liczbe" class="x6">
+    <input type="form" placeholder="Podaj 7 liczbe" class="x7">
+    <input type="form" placeholder="Podaj 8 liczbe" class="x8">
+    <input type="form" placeholder="Podaj 9 liczbe" class="x9">
+    <br>
+    <button onclick="wynik(1)">Licz</button>
+
+    <p class="wynik2"></p>
+    
+</body>
+</html>
